@@ -173,10 +173,11 @@ for ($i = 0; $i < count($elementos); $i++) {
     //cell invoke
     if ($elementos[$i]['estado']) {
         echo "
-        <div class='cell color-{$elementos[$i]['tipo']}'>
+        <div class='cell color-{$elementos[$i]['tipo']}' onclick = 'blockit(this)'>
             <div class='at_num'>{$elementos[$i]['numero']}</div>
             <div class='symbol'>{$elementos[$i]['simbolo']}</div>
             <div class='at_details'>{$elementos[$i]['nombre']}</div>
+            <div id='erase' class='block'></div>
             </div>" 
             ;
     }else{
@@ -197,10 +198,11 @@ for ($i = 0; $i < count($elementos_extras); $i++) {
     //cell invoke
     if ($elementos_extras[$i]['estado']) {
         echo "
-        <div class='cell color-{$elementos_extras[$i]['tipo']}'>
+        <div class='cell color-{$elementos_extras[$i]['tipo']}' onclick = 'blockit(this)'>
             <div class='at_num'>{$elementos_extras[$i]['numero']}</div>
             <div class='symbol'>{$elementos_extras[$i]['simbolo']}</div>
             <div class='at_details'>{$elementos_extras[$i]['nombre']}</div>
+            <div id='erase' class='block'></div>
             </div>" 
             ;
     }else{
@@ -223,19 +225,21 @@ for ($i = 0; $i < count($elementos_extras); $i++) {
  </div>
  <div class='space'></div>
  <div class="main-legend">
-     <div>Leyenda</div>
+     <div class="text-legend">Leyenda</div>
     <div class="legend">
-        <div class="color-0 d-block">Alcalinos</div>
-        <div class="color-1">AlcalinoTerreos</div>
-        <div class="color-2">Metales de Transicion</div>
-        <div class="color-3">Lantanidos</div>
-        <div class="color-4">Actinidos</div>
-        <div class="color-5">Otros Metales</div>
-        <div class="color-6">Metaloides</div>
-        <div class="color-7">Otros No Metales</div>
-        <div class="color-8">Halogenos</div>
-        <div class="color-9">Gases Nobles</div>
+        <div class="color-0 legend-item">Alcalinos</div>
+        <div class="color-1 legend-item">AlcalinoTerreos</div>
+        <div class="color-2 legend-item">Metales de Transicion</div>
+        <div class="color-3 legend-item">Lantanidos</div>
+        <div class="color-4 legend-item">Actinidos</div>
+        <div class="color-5 legend-item">Otros Metales</div>
+        <div class="color-6 legend-item">Metaloides</div>
+        <div class="color-7 legend-item">Otros No Metales</div>
+        <div class="color-8 legend-item">Halogenos</div>
+        <div class="color-9 legend-item">Gases Nobles</div>
+       
     </div>
  </div>
+ <script type = "text/javascript" src="js/app.js"></script> 
  </body>
 </html>
